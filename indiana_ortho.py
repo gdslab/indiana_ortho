@@ -163,9 +163,48 @@ class IndianaOrtho:
         self.county_names = [
             "adams",
             "blackford",
+            "clark",
+            "dearborn",
+            "decatur",
+            "dekalb",
+            "delaware",
+            "fayette",
+            "floyd",
+            "franklin",
+            "grant",
+            "hancock",
+            "henry",
+            "huntington",
+            "huntington_city",
+            "indnr",
+            "jay",
+            "jefferson",
+            "madison_hanover",
+            "shelbyville",
         ]
 
-        self.ortho_years = {"adams": ["2022"], "blackford": ["2022"]}
+        self.ortho_years = {
+            "adams": ["2022"],
+            "blackford": ["2022"],
+            "clark": ["2022"],
+            "dearborn": ["2022"],
+            "decatur": ["2022"],
+            "dekalb": ["2022"],
+            "delaware": ["2022"],
+            "fayette": ["2022"],
+            "floyd": ["2022"],
+            "franklin": ["2022"],
+            "grant": ["2022"],
+            "hancock": ["2022"],
+            "henry": ["2022"],
+            "huntington": ["2022"],
+            "huntington_city": ["2022"],
+            "indnr": ["2022"],
+            "jay": ["2022"],
+            "jefferson": ["2022"],
+            "madison_hanover": ["2022"],
+            "shelbyville": ["2022"],
+        }
 
         self.ortho_base_dir = "https://lidar.digitalforestry.org/state/"
 
