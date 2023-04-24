@@ -66,100 +66,6 @@ class IndianaOrtho:
         # Must be set in initGui() to survive plugin reloads
         self.first_start = None
 
-        # self.county_names = [
-        #     "adams",
-        #     "allen",
-        #     "bartholomew",
-        #     "benton",
-        #     "blackford",
-        #     "boone",
-        #     "brown",
-        #     "carroll",
-        #     "cass",
-        #     "clark",
-        #     "clay",
-        #     "clinton",
-        #     "crawford",
-        #     "daviess",
-        #     "dearborn",
-        #     "decatur",
-        #     "dekalb",
-        #     "delaware",
-        #     "dubois",
-        #     "elkhart",
-        #     "fayette",
-        #     "floyd",
-        #     "fountain",
-        #     "franklin",
-        #     "fulton",
-        #     "gibson",
-        #     "grant",
-        #     "greene",
-        #     "hamilton",
-        #     "hancock",
-        #     "harrison",
-        #     "hendricks",
-        #     "henry",
-        #     "howard",
-        #     "huntington",
-        #     "jackson",
-        #     "jasper",
-        #     "jay",
-        #     "jefferson",
-        #     "jennings",
-        #     "johnson",
-        #     "knox",
-        #     "kosciusko",
-        #     "lagrange",
-        #     "lake",
-        #     "laporte",
-        #     "lawrence",
-        #     "madison",
-        #     "marion",
-        #     "marshall",
-        #     "martin",
-        #     "miami",
-        #     "monroe",
-        #     "montgomery",
-        #     "morgan",
-        #     "newton",
-        #     "noble",
-        #     "ohio",
-        #     "orange",
-        #     "owen",
-        #     "parke",
-        #     "perry",
-        #     "pike",
-        #     "porter",
-        #     "posey",
-        #     "pulaski",
-        #     "putnam",
-        #     "randolph",
-        #     "ripley",
-        #     "rush",
-        #     "scott",
-        #     "shelby",
-        #     "spencer",
-        #     "starke",
-        #     "steuben",
-        #     "stjoseph",
-        #     "sullivan",
-        #     "switzerland",
-        #     "tippecanoe",
-        #     "tipton",
-        #     "union",
-        #     "vanderburgh",
-        #     "vermillion",
-        #     "vigo",
-        #     "wabash",
-        #     "warren",
-        #     "warrick",
-        #     "washington",
-        #     "wayne",
-        #     "wells",
-        #     "white",
-        #     "whitley",
-        # ]
         self.county_names = [
             "adams",
             "blackford",
@@ -179,8 +85,24 @@ class IndianaOrtho:
             "indnr",
             "jay",
             "jefferson",
+            "jennings",
+            "lagrange",
+            "madison",
             "madison_hanover",
+            "nobel",
+            "ohio",
+            "randolph",
+            "ripley",
+            "rush",
+            "scott",
+            "shelby",
             "shelbyville",
+            "steuben",
+            "switzerland",
+            "union",
+            "wayne",
+            "wells",
+            "whitley",
         ]
 
         self.ortho_years = {
@@ -202,9 +124,27 @@ class IndianaOrtho:
             "indnr": ["2022"],
             "jay": ["2022"],
             "jefferson": ["2022"],
+            "jennings": ["2022"],
+            "lagrange": ["2022"],
+            "madison": ["2022"],
             "madison_hanover": ["2022"],
+            "nobel": ["2022"],
+            "ohio": ["2022"],
+            "randolph": ["2022"],
+            "ripley": ["2022"],
+            "rush": ["2022"],
+            "scott": ["2022"],
+            "shelby": ["2022"],
             "shelbyville": ["2022"],
+            "steuben": ["2022"],
+            "switzerland": ["2022"],
+            "union": ["2022"],
+            "wayne": ["2022"],
+            "wells": ["2022"],
+            "whitley": ["2022"],
         }
+
+        self.quality = ["low", "medium", "high"]
 
         self.ortho_base_dir = "https://lidar.digitalforestry.org/state/"
 
@@ -316,8 +256,21 @@ class IndianaOrtho:
     def generate_cog_url(self):
         selected_county = self.dlg.comboBox_county.currentText()
         selected_year = self.dlg.comboBox_year.currentText()
+        selected_quality = self.dlg.comboBox_quality.currentText()
 
-        cog_url = self.ortho_base_dir + f"{selected_year}/{selected_county}/{selected_county}_{selected_year}_ortho.tif"
+        if selected_quality == "high":
+            cog_url = (
+                self.ortho_base_dir + f"{selected_year}/{selected_county}/{selected_county}_{selected_year}_ortho.tif"
+            )
+        elif selected_quality == "medium":
+            cog_url = (
+                self.ortho_base_dir + f"{selected_year}/{selected_county}/{selected_county}_{selected_year}_ortho_c.tif"
+            )
+        else:
+            cog_url = (
+                self.ortho_base_dir
+                + f"{selected_year}/{selected_county}/{selected_county}_{selected_year}_ortho_cc.tif"
+            )
 
         self.dlg.textEdit_cog_url.setText(cog_url)
 
@@ -352,13 +305,16 @@ class IndianaOrtho:
             # Initialize combo boxes
             self.dlg.comboBox_county.clear()
             self.dlg.comboBox_year.clear()
+            self.dlg.comboBox_quality.clear()
             self.dlg.comboBox_county.addItems(self.county_names)
+            self.dlg.comboBox_quality.addItems(self.quality)
             selected_county = self.dlg.comboBox_county.currentText()
             self.dlg.comboBox_year.addItems(self.ortho_years[selected_county])
             # Event handlers
             self.dlg.pushButton_add.clicked.connect(self.add_to_map)
             self.dlg.comboBox_county.currentIndexChanged.connect(self.generate_cog_url)
             self.dlg.comboBox_county.currentIndexChanged.connect(self.update_year)
+            self.dlg.comboBox_quality.currentIndexChanged.connect(self.generate_cog_url)
             self.generate_cog_url()
 
         # show the dialog
