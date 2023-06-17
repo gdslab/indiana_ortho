@@ -6,7 +6,7 @@
 name=Indiana Ortho Imagery
 qgisMinimumVersion=3.0
 description=This plugin provide easy access to Indiana Ortho Imageries
-version=0.1.3
+version=0.1.4
 author=Jinha Jung
 email=jinha@purdue.edu
 
@@ -20,7 +20,8 @@ repository=https://github.com/gdslab/indiana_ortho
 
 hasProcessingProvider=no
 # Uncomment the following line and add your changelog:
-# changelog=
+changelog=This is changelog for Indiana Ortho Plugin
+    0.1.4 - Added 2021 Indiana Ortho Imageries
 
 # Tags are comma separated with spaces allowed
 tags=python

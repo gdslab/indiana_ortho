@@ -103,7 +103,39 @@ class IndianaOrtho:
             "wayne",
             "wells",
             "whitley",
+            "allen",
+            "bartholomew",
+            "boone",
+            "brown",
+            "carroll",
+            "cass",
+            "clinton",
+            "crawford",
+            "elkhart",
+            "fulton",
+            "hamilton",
+            "harrison",
+            "hendricks",
+            "howard",
+            "jackson",
+            "johnson",
+            "kosciusko",
+            "lawrence",
+            "marion",
+            "marshall",
+            "miami",
+            "monroe",
+            "morgan",
+            "orange",
+            "pulaski",
+            "starke",
+            "stjoseph",
+            "tipton",
+            "wabash",
+            "washington"
         ]
+        
+        self.county_names.sort()
 
         self.ortho_years = {
             "adams": ["2022"],
@@ -121,7 +153,7 @@ class IndianaOrtho:
             "henry": ["2022"],
             "huntington": ["2022"],
             "huntington_city": ["2022"],
-            "indnr": ["2022"],
+            "indnr": ["2022","2021"],
             "jay": ["2022"],
             "jefferson": ["2022"],
             "jennings": ["2022"],
@@ -142,6 +174,36 @@ class IndianaOrtho:
             "wayne": ["2022"],
             "wells": ["2022"],
             "whitley": ["2022"],
+            "allen": ["2021"],
+            "bartholomew": ["2021"],
+            "boone": ["2021"],
+            "brown": ["2021"],
+            "carroll": ["2021"],
+            "cass": ["2021"],
+            "clinton": ["2021"],
+            "crawford": ["2021"],
+            "elkhart": ["2021"],
+            "fulton": ["2021"],
+            "hamilton": ["2021"],
+            "harrison": ["2021"],
+            "hendricks": ["2021"],
+            "howard": ["2021"],
+            "jackson": ["2021"],
+            "johnson": ["2021"],
+            "kosciusko": ["2021"],
+            "lawrence": ["2021"],
+            "marion": ["2021"],
+            "marshall": ["2021"],
+            "miami": ["2021"],
+            "monroe": ["2021"],
+            "morgan": ["2021"],
+            "orange": ["2021"],
+            "pulaski": ["2021"],
+            "starke": ["2021"],
+            "stjoseph": ["2021"],
+            "tipton": ["2021"],
+            "wabash": ["2021"],
+            "washington": ["2021"]
         }
 
         self.quality = ["low", "medium", "high"]
@@ -315,6 +377,7 @@ class IndianaOrtho:
             self.dlg.comboBox_county.currentIndexChanged.connect(self.generate_cog_url)
             self.dlg.comboBox_county.currentIndexChanged.connect(self.update_year)
             self.dlg.comboBox_quality.currentIndexChanged.connect(self.generate_cog_url)
+            self.dlg.comboBox_year.currentIndexChanged.connect(self.generate_cog_url)
             self.generate_cog_url()
 
         # show the dialog
