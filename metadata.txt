@@ -6,7 +6,7 @@
 name=Indiana Ortho Imagery
 qgisMinimumVersion=3.0
 description=This plugin provide easy access to Indiana Ortho Imageries
-version=0.1.4
+version=0.1.5
 author=Jinha Jung
 email=jinha@purdue.edu
 
@@ -22,6 +22,9 @@ hasProcessingProvider=no
 # Uncomment the following line and add your changelog:
 changelog=This is changelog for Indiana Ortho Plugin
     0.1.4 - Added 2021 Indiana Ortho Imageries
+    0.1.5 - Added 2023 Indiana Ortho Imageries. Below is a list of added counties:
+            Daviess, Dubois, Gibson, Huntingbur (3 in), Knox, Martin, Perry,
+            Pike, Posey, Spencer, Vanderburgh, Vermillion (3 in), Warrick
 
 # Tags are comma separated with spaces allowed
 tags=python
