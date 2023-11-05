@@ -145,7 +145,17 @@ class IndianaOrtho:
             "stjoseph",
             "tipton",
             "wabash",
-            "washington"
+            "washington",
+            "clay",
+            "fountain",
+            "greene",
+            "montgomery",
+            "owen",
+            "parke",
+            "putnam",
+            "sullivan",
+            "vigo",
+            "warren"
         ]
         
         self.county_names.sort()
@@ -229,7 +239,17 @@ class IndianaOrtho:
             "stjoseph": ["2021"],
             "tipton": ["2021"],
             "wabash": ["2021"],
-            "washington": ["2021"]
+            "washington": ["2021"],
+            "clay": ["2023"],
+            "fountain": ["2023"],
+            "greene": ["2023"],
+            "montgomery": ["2023"],
+            "owen": ["2023"],
+            "parke": ["2023"],
+            "putnam": ["2023"],
+            "sullivan": ["2023"],
+            "vigo": ["2023"],
+            "warren": ["2023"]
         }
 
         self.quality = ["low", "medium", "high"]
