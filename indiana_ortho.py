@@ -51,7 +51,9 @@ class IndianaOrtho:
         self.plugin_dir = os.path.dirname(__file__)
         # initialize locale
         locale = QSettings().value("locale/userLocale")[0:2]
-        locale_path = os.path.join(self.plugin_dir, "i18n", "IndianaOrtho_{}.qm".format(locale))
+        locale_path = os.path.join(
+            self.plugin_dir, "i18n", "IndianaOrtho_{}.qm".format(locale)
+        )
 
         if os.path.exists(locale_path):
             self.translator = QTranslator()
@@ -155,9 +157,9 @@ class IndianaOrtho:
             "putnam",
             "sullivan",
             "vigo",
-            "warren"
+            "warren",
         ]
-        
+
         self.county_names.sort()
 
         self.ortho_years = {
@@ -180,7 +182,7 @@ class IndianaOrtho:
             "huntingbur": ["2023"],
             "huntington": ["2022"],
             "huntington_city": ["2022"],
-            "indnr": ["2022","2021"],
+            "indnr": ["2022", "2021"],
             "jay": ["2022"],
             "jefferson": ["2022"],
             "jennings": ["2022"],
@@ -249,7 +251,7 @@ class IndianaOrtho:
             "putnam": ["2023"],
             "sullivan": ["2023"],
             "vigo": ["2023"],
-            "warren": ["2023"]
+            "warren": ["2023"],
         }
 
         self.quality = ["low", "medium", "high"]
@@ -349,7 +351,10 @@ class IndianaOrtho:
 
         icon_path = ":/plugins/indiana_ortho/icon.png"
         self.add_action(
-            icon_path, text=self.tr("Indiana Ortho Imagery"), callback=self.run, parent=self.iface.mainWindow()
+            icon_path,
+            text=self.tr("Indiana Ortho Imagery"),
+            callback=self.run,
+            parent=self.iface.mainWindow(),
         )
 
         # will be set False in run()
@@ -368,11 +373,13 @@ class IndianaOrtho:
 
         if selected_quality == "high":
             cog_url = (
-                self.ortho_base_dir + f"{selected_year}/{selected_county}/{selected_county}_{selected_year}_ortho.tif"
+                self.ortho_base_dir
+                + f"{selected_year}/{selected_county}/{selected_county}_{selected_year}_ortho.tif"
             )
         elif selected_quality == "medium":
             cog_url = (
-                self.ortho_base_dir + f"{selected_year}/{selected_county}/{selected_county}_{selected_year}_ortho_c.tif"
+                self.ortho_base_dir
+                + f"{selected_year}/{selected_county}/{selected_county}_{selected_year}_ortho_c.tif"
             )
         else:
             cog_url = (
@@ -387,11 +394,18 @@ class IndianaOrtho:
         selected_county = self.dlg.comboBox_county.currentText()
         selected_year = self.dlg.comboBox_year.currentText()
         # print(f"Indiana_{selected_county}_{selected_year}_ortho")
-        rlayer = QgsRasterLayer("/vsicurl/" + cog_url, f"Indiana_{selected_county}_{selected_year}_ortho")
+        rlayer = QgsRasterLayer(
+            "/vsicurl/" + cog_url, f"Indiana_{selected_county}_{selected_year}_ortho"
+        )
         if rlayer.isValid():
             QgsProject().instance().addMapLayer(rlayer)
         else:
             print("Not valid.")
+
+        # Make value of 0 as transparent
+        layer = self.iface.activeLayer()
+        provider = layer.dataProvider()
+        provider.setNoDataValue(1, 0)
 
         # Now zoom to the added layer
         self.iface.zoomToActiveLayer()
