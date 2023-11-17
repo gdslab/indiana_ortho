@@ -222,7 +222,7 @@ class IndianaOrtho:
             "crawford": ["2021"],
             "elkhart": ["2021"],
             "fulton": ["2021"],
-            "hamilton": ["2021"],
+            "hamilton": ["2021", "2023"],
             "harrison": ["2021"],
             "hendricks": ["2021"],
             "howard": ["2021"],
@@ -254,7 +254,7 @@ class IndianaOrtho:
             "warren": ["2023"],
         }
 
-        self.quality = ["low", "medium", "high"]
+        self.quality = ["high", "medium", "low"]
 
         self.ortho_base_dir = "https://lidar.digitalforestry.org/state/"
 
