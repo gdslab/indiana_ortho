@@ -6,7 +6,7 @@
 name=Indiana Ortho Imagery
 qgisMinimumVersion=3.0
 description=This plugin provide easy access to Indiana Ortho Imageries
-version=0.1.9
+version=0.2.0
 author=Jinha Jung
 email=jinha@purdue.edu
 
@@ -30,6 +30,8 @@ changelog=This is changelog for Indiana Ortho Plugin
             Clay, Fountain, Greene, Montgomery, Owen, Parke, Putnam, Sullivan, Vigo, Warren
     0.1.8 - Change transparency setting so that pixel with 0 are transparent by default.
     0.1.9 - Added 2023 Hamilton county 3 inch ortho imagery. Updated default quality setting to be high, instead of low. 
+    0.2.0 - Completed 2023 Indiana Ortho Imageries. Below is a list of added counties:
+            Benton, Jasper, Lake, LaPorte, Newton, Porter, Tippecanoe, White, DNR
     
 # Tags are comma separated with spaces allowed
 tags=python
