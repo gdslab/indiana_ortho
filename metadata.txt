@@ -6,7 +6,7 @@
 name=Indiana Ortho Imagery
 qgisMinimumVersion=3.0
 description=This plugin provide easy access to Indiana Ortho Imageries
-version=0.2.0
+version=0.2.3
 author=Jinha Jung
 email=jinha@purdue.edu
 
@@ -32,6 +32,16 @@ changelog=This is changelog for Indiana Ortho Plugin
     0.1.9 - Added 2023 Hamilton county 3 inch ortho imagery. Updated default quality setting to be high, instead of low. 
     0.2.0 - Completed 2023 Indiana Ortho Imageries. Below is a list of added counties:
             Benton, Jasper, Lake, LaPorte, Newton, Porter, Tippecanoe, White, DNR
+    0.2.1 - Added 2019 Indiana Ortho Imageries. Below is a list of added counties:
+            Daviess, Dubois, Knox, Martin, Monroe, Perry, Pike, Posey, Spencer, Vanderburgh, Vermillion, Warrick
+    0.2.2 - Added 2018 Indiana Ortho Imageries. Below is a list of added counties:
+            Allen, Benton, Clay, Fountain, Greene, Huntingburg City, Jasper, Lake, LaPorte, Montgomery, Newton
+            Owen, Parke, Porter, Putnam, Sullivan, Tippecanoe, Vigo, Warren, White
+    0.2.3 - Added 2017 Indiana Ortho Imageries. Below is a list of added counties:
+            Adams, Blackford, Clark, Crawford, Dearborn, Decatur, Dekalb, Delaware, Fayette, Floyd, Franklin, Gibson
+            Grant, Hamilton, Hancock, Henry, Huntington, Jay, Jefferson, Jennings, Lagrange, Lawrence, Madison
+            Miami, Noble, Ohio, Orange, Randolph, Ripley, Rush, Scott, Shelby, Shelbyville, Steuben, Switzerland
+            Union, Washington, Wayne, Wells, Whitley
     
 # Tags are comma separated with spaces allowed
 tags=python
