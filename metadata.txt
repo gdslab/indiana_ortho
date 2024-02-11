@@ -6,7 +6,7 @@
 name=Indiana Ortho Imagery
 qgisMinimumVersion=3.0
 description=This plugin provide easy access to Indiana Ortho Imageries
-version=0.2.4
+version=0.2.5
 author=Jinha Jung
 email=jinha@purdue.edu
 
@@ -43,8 +43,14 @@ changelog=This is changelog for Indiana Ortho Plugin
             Miami, Noble, Ohio, Orange, Randolph, Ripley, Rush, Scott, Shelby, Shelbyville, Steuben, Switzerland
             Union, Washington, Wayne, Wells, Whitley
     0.2.4 - Added 2016 Indiana Ortho Imageries. Below is a list of added counties:
-            Bartholomew, Boone, Brown, Carroll, Cass, Clinton, Elkhart, Flood Imagery, Fulton, Hamilton, Harrison, Hendricks
-            Howard, Jackson, Johnson, Kosciusko, Marion, Marshall, Monroe, Morgan, Pulaski, Starke, StJoseph, Tipton, Wabash
+            Bartholomew, Boone, Brown, Carroll, Cass, Clinton, Elkhart, Flood Imagery,
+            Fulton, Hamilton, Harrison, Hendricks
+            Howard, Jackson, Johnson, Kosciusko, Marion, Marshall, Monroe, Morgan, Pulaski,
+            Starke, StJoseph, Tipton, Wabash
+    0.2.5 - Added 2011 Indiana Ortho Imageries. Below is a list of added counties:
+            Bartholomew, Boone, Brown, Carroll, Cass, Clinton, Crawford, Fulton, Harrison, Hendricks
+            Howard, Jackson, Johnson, Kosciusko, Lawrence, Marion, Marshall, Miami, Monroe, Morgan
+            Orange, Pulaski, Starke, StJoseph, Tipton, Wabash, Washington
     
 # Tags are comma separated with spaces allowed
 tags=python
