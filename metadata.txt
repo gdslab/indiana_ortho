@@ -6,7 +6,7 @@
 name=Indiana Ortho Imagery
 qgisMinimumVersion=3.0
 description=This plugin provide easy access to Indiana Ortho Imageries
-version=0.2.5
+version=0.2.6
 author=Jinha Jung
 email=jinha@purdue.edu
 
@@ -51,6 +51,9 @@ changelog=This is changelog for Indiana Ortho Plugin
             Bartholomew, Boone, Brown, Carroll, Cass, Clinton, Crawford, Fulton, Harrison, Hendricks
             Howard, Jackson, Johnson, Kosciusko, Lawrence, Marion, Marshall, Miami, Monroe, Morgan
             Orange, Pulaski, Starke, StJoseph, Tipton, Wabash, Washington
+    0.2.6 - Fixed 2011 Bartholomew ortho images.
+            Previously, 2011 Bartholomew ortho image was not complete, but now it is.
+            2011 Elkhart ortho image was added.
     
 # Tags are comma separated with spaces allowed
 tags=python
