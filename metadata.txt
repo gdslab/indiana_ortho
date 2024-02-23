@@ -6,7 +6,7 @@
 name=Indiana Ortho Imagery
 qgisMinimumVersion=3.0
 description=This plugin provide easy access to Indiana Ortho Imageries
-version=0.2.6
+version=0.2.7
 author=Jinha Jung
 email=jinha@purdue.edu
 
@@ -54,6 +54,11 @@ changelog=This is changelog for Indiana Ortho Plugin
     0.2.6 - Fixed 2011 Bartholomew ortho images.
             Previously, 2011 Bartholomew ortho image was not complete, but now it is.
             2011 Elkhart ortho image was added.
+    0.0.7 - Added 2012 Indiana Ortho Imageries. Below is a list of added counties:
+            Adams, Allen, Blackford, Clark, Dearborn, Dekalb, Delaware, Fayette, Floyd, Franklin
+            Grant, Hamilton, Hancock, Henry, Huntington, Jay, Jefferson, Jennings, Lagrange
+            Madison, Noble, Ohio, Randolph, Ripley, Rush, Scott, Shelby, Steuben
+            Switzerland, Union, Wayne, Wells, Whitley
     
 # Tags are comma separated with spaces allowed
 tags=python
