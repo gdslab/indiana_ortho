@@ -4,13 +4,14 @@
 
 [general]
 name=Indiana Ortho Imagery
-qgisMinimumVersion=3.0
+qgisMinimumVersion=3.22
+qgisMaximumVersion=4.99
 description=This plugin provide easy access to Indiana Ortho Imageries
-version=0.2.7
+version=0.3.0
 author=Jinha Jung
 email=jinha@purdue.edu
 
-about=This plugin provide eash access to Indiana Ortho Imageries.
+about=This plugin provide easy access to Indiana Ortho Imageries.
 
 tracker=https://github.com/gdslab/indiana_ortho/issues
 repository=https://github.com/gdslab/indiana_ortho
@@ -54,12 +55,23 @@ changelog=This is changelog for Indiana Ortho Plugin
     0.2.6 - Fixed 2011 Bartholomew ortho images.
             Previously, 2011 Bartholomew ortho image was not complete, but now it is.
             2011 Elkhart ortho image was added.
-    0.0.7 - Added 2012 Indiana Ortho Imageries. Below is a list of added counties:
+    0.2.7 - Added 2012 Indiana Ortho Imageries. Below is a list of added counties:
             Adams, Allen, Blackford, Clark, Dearborn, Dekalb, Delaware, Fayette, Floyd, Franklin
             Grant, Hamilton, Hancock, Henry, Huntington, Jay, Jefferson, Jennings, Lagrange
             Madison, Noble, Ohio, Randolph, Ripley, Rush, Scott, Shelby, Steuben
             Switzerland, Union, Wayne, Wells, Whitley
-    
+    0.2.8 - Added 2013 Indiana Ortho Imageries. Below is a list of added counties/cities:
+            Benton, Bicknell, Clay, Daviess, Fountain, Gibson, Greene, Jasper, Knox, LaPorte
+            Martin, Montgomery, Newton, Owen, Parke, Perry, Pike, Porter, Posey, Purdue
+            Putnam, Sullivan, Tippecanoe, Vanderburgh, Vermillion, Vigo, Vincennes
+            Warren, Warrick, White
+    0.2.9 - Added additional 2013 Indiana Ortho Imageries. Below is a list of added counties:
+            Dubois, Lake, Marion
+    0.2.10 - Added 2024 Hamilton County Ortho Imageries.
+    0.3.0 - Compatible with both Qt5 and Qt6 builds of QGIS, so the plugin installs
+            on QGIS 3 and QGIS 4. Minimum QGIS version raised to 3.22.
+            Corrected the license file.
+
 # Tags are comma separated with spaces allowed
 tags=python
 
@@ -77,7 +89,7 @@ deprecated=False
 # Check the documentation for more information.
 # plugin_dependencies=
 
-Category of the plugin: Raster, Vector, Database or Web
+# Category of the plugin: Raster, Vector, Database or Web
 # category=
 
 # If the plugin can run on QGIS Server.
